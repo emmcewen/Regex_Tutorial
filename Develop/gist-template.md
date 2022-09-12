@@ -46,7 +46,7 @@ The table of contents will outline each section of this code and how it works.
 ### Grouping Constructs
 * (ABC) Capturing groups multiple tokens together and creates a capture group for extracting a substring or using a backreference.
 * (?<name>ABC) named capturing group captures groups of a specific name.
-* \1 is a numeric Referance
+* \1 is a numeric reference
 * (?:ABC) Groups multiple tokens together without creating a capture group
 ### Bracket Expressions
 * A bracket expression represents a character set via a list of characters enclosed by the square brackets: '[' and ']'. It normally matches the target string with any single character from the list.

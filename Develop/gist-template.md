@@ -57,13 +57,33 @@ If the character list begins with '^', it matches any single character not from 
 * ^ is literal if not at the beginning of a bracket expression
 
 ### Character Classes
+Character classes match a character from a specific set. There are a number of predefined character classes and you can also define your own sets.
+
+* [ABC] Characters inside brakets will match "a", "b", or "c". 
+* [^ABC] Adding a caret will match any character that is not in the set.
+* [A-Z] Add a dash between two characters will select a Range.[a-z] specifies a range which matches any lowercase letter from "a" to "z". These forms can be mixed: [abcx-z] matches "a", "b", "c", "x", "y", or "z", as does [a-cx-z]
+* .  Will Match any characters expect linebreaks. Its like a wildcard and will accpet any input.
+* [\s\S] A character set that can be used to match any character, including line breaks, without the dotall flag. An alternative is [^] carrot in brackets, but it is not supported in all browsers.
+* \w Matches any word character (alphanumeric & underscore). Only matches low-ascii characters (no accented or non-roman characters).
+* \W Matches any character that is not a word character (alphanumeric & underscore).
+* *d Matches any digit character (0-9)
+* \p Matches a character in the specified unicode category.
 
 ### The OR Operator
-
+* | Acts like a boolean OR. Matches the expression before or after the | It can operate within a group, or on a whole expression. The patterns will be tested in order. Just as in java will match either set of characters. It will look for this OR that.
 ### Flags
+*
 
 ### Character Escapes
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Emily McEwen: The Ohio State University Full Stack Bootcamp Student
+
+### Sources and References
+* `https://www.regular-expressions.info/charclass.html`
+* `https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet`
+* `https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285`
+* `https://en.wikipedia.org/wiki/Regular_expression`
+
+My Github: `https://github.com/emmcewen`

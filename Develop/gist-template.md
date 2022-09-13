@@ -72,9 +72,28 @@ Character classes match a character from a specific set. There are a number of p
 ### The OR Operator
 * | Acts like a boolean OR. Matches the expression before or after the | It can operate within a group, or on a whole expression. The patterns will be tested in order. Just as in java will match either set of characters. It will look for this OR that.
 ### Flags
-*
+* A regular expression consists of a pattern and optional flags: g, i, m, u, s, y. Without flags and special symbols (that we’ll study later), the search by a regexp is the same as a substring search.
+* `i` ignores case
+* `g` Global search retain the index of the last match, allowing following searches to start from the end of the previous match. Without global flag, all searches will return the same match. 
+* `m` Multiline flag, when enabled, beginning and end anchors (^ and $) will match the start and end of the line, instead of the start and end of the string. 
+* `u` Unicode, enables full Unicode support. This flag enables correct processing of surrogate pairs. 
+* `y` "Sticky" mode: searching at the exact position and ingnores the global (g) flag if set. 
+* `s` enables "dotall" mode that allows dot (.) to match any character, including newline (\n).
+
 
 ### Character Escapes
+To match a character having special meaning in regex, you need to use a
+* `(\)` escape sequence prefix with a backslash  \. matches "."; regex \+ matches "+"; and regex \( matches "(".
+* `\\` Use regex \\ to match "\" (back-slash)
+* `n` newline escape sequence
+* `\t` for tab
+* `\r` for carriage-return
+* `\nnn` for a up to 3-digit octal number
+* `\xhh` for a two-digit hex code,
+* `\uhhhh` for a 4-digit Unicode 
+* `\uhhhhhhhh` for a 8-digit Unicode
+
+
 
 ## Author
 
